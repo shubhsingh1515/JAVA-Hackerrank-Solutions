@@ -1,0 +1,15 @@
+
+
+    public static String getSmallestAndLargest(String s, int k) {
+       String min = s.substring(0,k);
+        String max = s.substring(0,k);
+        
+        
+        for(int i=1;i<s.length()-k+1;i++){
+            if(min.compareTo(s.substring(i,i+k)) > 0 )
+                min=s.substring(i,i+k);
+            if(max.compareTo(s.substring(i,i+k)) < 0 )     
+                max=s.substring(i,i+k);
+        }
+        return min + "\n" + max;
+    }
